@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | koreyoshi</title>
+  <title>test | koreyoshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="随笔，杂谈，博客，一个心灵寄托之地">
-<meta property="og:type" content="website">
-<meta property="og:title" content="koreyoshi">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="lab6测试库目录下的test.out文件为测试过程调用程序 请不要删除 同学们需要将自己完成的编译器程序拷贝到根目录下 默认命名为main.out 后面会介绍如何更改使用不同名字 文件结构test文件夹下是不同级别的测试文件以及类型检查的测试文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://example.com/2021/07/03/test/index.html">
 <meta property="og:site_name" content="koreyoshi">
-<meta property="og:description" content="随笔，杂谈，博客，一个心灵寄托之地">
+<meta property="og:description" content="lab6测试库目录下的test.out文件为测试过程调用程序 请不要删除 同学们需要将自己完成的编译器程序拷贝到根目录下 默认命名为main.out 后面会介绍如何更改使用不同名字 文件结构test文件夹下是不同级别的测试文件以及类型检查的测试文件">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-03T15:30:39.655Z">
+<meta property="article:modified_time" content="2021-07-03T15:52:05.428Z">
 <meta property="article:author" content="Sun">
+<meta property="article:tag" content="test">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="koreyoshi" type="application/atom+xml">
@@ -146,36 +149,83 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/03/test/" class="archive-article-date">
-  	<time datetime="2021-07-03T15:30:39.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/03/test/">test</a>
+    <h1 class="article-title" itemprop="name">
+      test
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/07/03/test/" class="archive-article-date">
+  	<time datetime="2021-07-03T15:30:39.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="lab6测试库"><a href="#lab6测试库" class="headerlink" title="lab6测试库"></a>lab6测试库</h1><p>目录下的<code>test.out</code>文件为测试过程调用程序 <strong>请不要删除</strong></p>
+<p>同学们需要将自己完成的编译器程序拷贝到根目录下 默认命名为<code>main.out</code> 后面会介绍如何更改使用不同名字</p>
+<h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><p><code>test</code>文件夹下是不同级别的测试文件以及类型检查的测试文件</p>
+<a id="more"></a>
+
+<h3 id="类型检查"><a href="#类型检查" class="headerlink" title="类型检查"></a>类型检查</h3><p>对于类型检查的文件 需要对每份代码输出类型检查的结果 包含必要的报错信息以及可能的修正信息等等 使用方式控制命令部分有写到 默认的检测方式为<code>./main.out &lt;file.c &gt;file.res</code></p>
+<p>目前我们只提供了简单的几个类型检查样例 同学们如果有实现高级功能或更多的检查功能可以自行添加</p>
+<h3 id="测试文件"><a href="#测试文件" class="headerlink" title="测试文件"></a>测试文件</h3><p>通常一个完整的测试样例包含</p>
+<ul>
+<li><code>file.c</code> 测试代码</li>
+<li><code>file.in</code> 测试输入</li>
+<li><code>file.output</code> 测试输出</li>
+<li><code>file.s</code> 同学们的程序输出的汇编代码</li>
+<li><code>file.out</code> 根据同学们翻译出的汇编代码经过编译器翻译得到的程序</li>
+<li><code>file_std.out</code> 通过官方编译器编译得到的标准程序</li>
+<li><code>file_std.output</code> 标准输出 作为对照使用</li>
+</ul>
+<p>仓库只包含了必要的代码文件和输入文件 其他文件会在程序运行过程中产生</p>
+<h2 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h2><ul>
+<li><code>make</code> 命令会使用默认设置进行整个测试流程(不包括类型检查) <ul>
+<li>默认设置为<code>x86</code>平台 </li>
+<li>默认测试编译器路径为<code>./main.out</code> </li>
+<li>默认测试命令为<code>./main.out &lt;file.c &gt;file.s</code> </li>
+<li>默认测试所有等级下所有样例 </li>
+<li>默认翻译汇编代码命令为<code>gcc file.s -m32 -o file.out</code></li>
+<li>默认测试程序的命令为<code>qemu-i386 file.out &lt;file.in &gt;file.output</code></li>
+<li>默认将过程中错误提示写到<code>err.log</code>中</li>
+</ul>
+</li>
+<li><code>make arm</code> 命令会将平台变更为arm平台<ul>
+<li>翻译汇编代码命令变更为<code>arm-linux-gnueabi-gcc -static file.s -o file.out</code></li>
+<li>测试程序命令变更为<code>qemu-arm file.out &lt;file.in &gt;file.output</code></li>
+</ul>
+</li>
+<li><code>make l1/2/3/4</code>命令单独测试不同等级样例</li>
+<li><code>make arm-l1/2/3/4</code> 命令在arm平台下单独测试不同等级不同样例</li>
+<li><code>make noerrlog</code> 命令将所有报错直接在终端输出</li>
+<li><code>make type</code> 命令进行<strong>类型检查</strong>工作 对所有类型检查代码分别运行<code>./main.out &lt;file.c &gt;file.res</code></li>
+<li><code>make diffcheck</code> 命令对所有样例(不包括类型检查)通过gcc编译器生成对应的32位汇编代码命名为<code>file_std.s</code>供参考使用</li>
+<li><code>make std</code> 命令检查所有样例(不包括类型检查)对无输入文件的样例创建对应输入文件</li>
+<li><code>make different</code> 命令对所有样例(不包括类型检查)对未拷贝的代码拷贝出一份对应<code>.sy</code>文件 具体作用我们后文会提到</li>
+<li><code>make clean</code> 命令删除编译产生的程序</li>
+<li><code>make clean-complete</code> 命令删除绝大部分自己产生的文件 <strong>慎用</strong><h2 id="测试过程"><a href="#测试过程" class="headerlink" title="测试过程"></a>测试过程</h2></li>
+<li>打印当前设置</li>
+<li>生成标准输出</li>
+<li>测试编译器产生汇编代码</li>
+<li>翻译汇编代码产生输出</li>
+<li>对比标准输出与测试输出<h2 id="一些额外的说明"><a href="#一些额外的说明" class="headerlink" title="一些额外的说明"></a>一些额外的说明</h2>查看Makefile可以知道 实际上上文提到的不同设置只是在调用<code>test.out</code>时增加了不同的参数 因此在这里说明一些额外的设置<h3 id="我的程序不想命名为main-out-我的类型检查和编译器作业是两个程序"><a href="#我的程序不想命名为main-out-我的类型检查和编译器作业是两个程序" class="headerlink" title="我的程序不想命名为main.out/我的类型检查和编译器作业是两个程序"></a>我的程序不想命名为main.out/我的类型检查和编译器作业是两个程序</h3>通过<code>compiler</code>参数可以更改测试编译器的路径 例如测试编译器命名为<code>haveatry.tet</code> 在Makefile中或直接调用时添加<code>--compiler ./haveatry.tet</code>即可更改测试编译器调用方式<h3 id="我的IO没有支持标准格式欸-有些样例我规定的写法不允许可以更改吗"><a href="#我的IO没有支持标准格式欸-有些样例我规定的写法不允许可以更改吗" class="headerlink" title="我的IO没有支持标准格式欸/有些样例我规定的写法不允许可以更改吗"></a>我的IO没有支持标准格式欸/有些样例我规定的写法不允许可以更改吗</h3>首先通过<code>make different</code>命令将所有样例拷贝为<code>.sy</code>文件 在<code>.sy</code>文件中进行修改 而后通过添加<code>different</code>参数可以令测试程序将测试命令变为<code>./main.out &lt;file.sy &gt;file.s</code> 在Makefile或直接调用时添加<code>--different</code>参数即可<h3 id="我想自己添加一些样例"><a href="#我想自己添加一些样例" class="headerlink" title="我想自己添加一些样例"></a>我想自己添加一些样例</h3>当然可以 直接在任何一个级别下添加你自己的c代码以及标准输入即可<h3 id="一些自己想实现的测试方法或有其他问题"><a href="#一些自己想实现的测试方法或有其他问题" class="headerlink" title="一些自己想实现的测试方法或有其他问题"></a>一些自己想实现的测试方法或有其他问题</h3>欢迎直接向助教提问或者提issue~</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,68 +237,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/03/test/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/03/hexo+yilia%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2021-07-03T15:30:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/03/hexo+yilia%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo+yilia博客搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/03/hexo+yilia%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo+yilia博客搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -281,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
