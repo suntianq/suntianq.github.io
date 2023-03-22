@@ -241,70 +241,20 @@
       
         <p>服务器部署jupyter ， 通过将服务器的8888端口映射到本地的某一个端口，即可访问服务器的jupyter notebook服务。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L8888:localhost:8888 username@ip</span><br></pre></td></tr></table></figure>
+
+
+
 <a id="more"></a>
+
 <h2 id="矩阵计算"><a href="#矩阵计算" class="headerlink" title="矩阵计算"></a>矩阵计算</h2><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>导数扩展到向量：</p>
 <p><img src="https://mytyporapic.oss-cn-beijing.aliyuncs.com/image-20220421161355878.png" alt="image-20220421161355878"></p>
 <p>都是标量求导后为标量，<strong>x</strong>为n$\times$1向量则$\frac{\partial y}{\partial \textbf{x}}$ 为1$\times$n向量。<strong>y</strong>为$n\times1$向量则$\frac{\partial  \textbf{y}}{\partial x}$依然为$n\times 1$向量。</p>
-<p>对于$\frac{\partial y}{\partial \textbf{x}}$ 来说：</p>
-<script type="math/tex; mode=display">
-\textbf{x}=\begin{bmatrix}
-x_1\\
-x_2\\
-\vdots \\
-x_n
-\end{bmatrix}
-\quad
-\frac{\partial y}{\partial \textbf x}=\begin{bmatrix}
-\frac{\partial y}{\partial x_1},\frac{\partial y}{\partial x_2},\dots,\frac{\partial y}{\partial x_n}
-\end{bmatrix}
-\\
-假设\textbf{x}=\begin{bmatrix}
-x_1\\
-x_2\\
-\end{bmatrix}
-\quad 
-y=x_1^2+2x_2^2，则\\
-\frac{\partial}{\partial \textbf{x}} x_1^2 + 2x_2^2 =[2x_1,4x_2]</script><p><img src="https://mytyporapic.oss-cn-beijing.aliyuncs.com/image-20220421163215290.png" alt="image-20220421163215290"></p>
-<script type="math/tex; mode=display">
-\frac{\partial \textbf{y}}{\partial x}\\
-\textbf{y} = \begin{bmatrix}
-y_1\\
-y_2\\
-\vdots\\
-y_m
-\end{bmatrix}  \quad
-\frac{\partial \textbf{y}}{\partial x}=\begin{bmatrix}
-\frac{\partial y_1}{\partial x}\\
-\frac{\partial y_2}{\partial x}\\
-\vdots\\
-\frac{\partial y_m}{\partial x}
-\end{bmatrix}</script><script type="math/tex; mode=display">
-\frac{\partial \textbf{y}}{\partial \textbf{x}}\\
-\textbf{x}=\begin{bmatrix}
-x_1\\
-x_2\\
-\vdots\\
-x_n
-\end{bmatrix} \quad
-\textbf{y}=\begin{bmatrix}
-y_1\\
-y_2\\
-\vdots\\
-y_m
-\end{bmatrix} \\
-
-\frac{\partial \textbf{y}}{\partial \textbf{x}}=\begin{bmatrix}
-\frac{\partial y_1}{\partial \textbf{x}}\\
-\frac{\partial y_2}{\partial \textbf{x}}\\
-\vdots\\
-\frac{\partial y_m}{\partial \textbf{x}}\\
-\end{bmatrix}=\begin{bmatrix}
-\frac{\partial y_1}{\partial x_1},\frac{\partial y_1}{\partial x_2},\dots,\frac{\partial y_1}{\partial x_n}\\
-\frac{\partial y_2}{\partial x_1},\frac{\partial y_2}{\partial x_2},\dots,\frac{\partial y_2}{\partial x_n}\\
-\vdots\\
-\frac{\partial y_m}{\partial x_1},\frac{\partial y_m}{\partial x_2},\dots,\frac{\partial y_m}{\partial x_n},
-
-\end{bmatrix}</script><p><img src="https://mytyporapic.oss-cn-beijing.aliyuncs.com/image-20220421164827802.png" alt="image-20220421164827802"></p>
+<p>对于$\frac{\partial y}{\partial \textbf{x}}$ 来说：<br>$$<br>\textbf{x}=\begin{bmatrix}<br>x_1\<br>x_2\<br>\vdots \<br>x_n<br>\end{bmatrix}<br>\quad<br>\frac{\partial y}{\partial \textbf x}=\begin{bmatrix}<br>\frac{\partial y}{\partial x_1},\frac{\partial y}{\partial x_2},\dots,\frac{\partial y}{\partial x_n}<br>\end{bmatrix}<br>\<br>假设\textbf{x}=\begin{bmatrix}<br>x_1\<br>x_2\<br>\end{bmatrix}<br>\quad<br>y=x_1^2+2x_2^2，则\<br>\frac{\partial}{\partial \textbf{x}} x_1^2 + 2x_2^2 =[2x_1,4x_2]<br>$$</p>
+<p><img src="https://mytyporapic.oss-cn-beijing.aliyuncs.com/image-20220421163215290.png" alt="image-20220421163215290"></p>
+<p>$$<br>\frac{\partial \textbf{y}}{\partial x}\<br>\textbf{y} = \begin{bmatrix}<br>y_1\<br>y_2\<br>\vdots\<br>y_m<br>\end{bmatrix}  \quad<br>\frac{\partial \textbf{y}}{\partial x}=\begin{bmatrix}<br>\frac{\partial y_1}{\partial x}\<br>\frac{\partial y_2}{\partial x}\<br>\vdots\<br>\frac{\partial y_m}{\partial x}<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>\frac{\partial \textbf{y}}{\partial \textbf{x}}\<br>\textbf{x}=\begin{bmatrix}<br>x_1\<br>x_2\<br>\vdots\<br>x_n<br>\end{bmatrix} \quad<br>\textbf{y}=\begin{bmatrix}<br>y_1\<br>y_2\<br>\vdots\<br>y_m<br>\end{bmatrix} \</p>
+<p>\frac{\partial \textbf{y}}{\partial \textbf{x}}=\begin{bmatrix}<br>\frac{\partial y_1}{\partial \textbf{x}}\<br>\frac{\partial y_2}{\partial \textbf{x}}\<br>\vdots\<br>\frac{\partial y_m}{\partial \textbf{x}}\<br>\end{bmatrix}=\begin{bmatrix}<br>\frac{\partial y_1}{\partial x_1},\frac{\partial y_1}{\partial x_2},\dots,\frac{\partial y_1}{\partial x_n}\<br>\frac{\partial y_2}{\partial x_1},\frac{\partial y_2}{\partial x_2},\dots,\frac{\partial y_2}{\partial x_n}\<br>\vdots\<br>\frac{\partial y_m}{\partial x_1},\frac{\partial y_m}{\partial x_2},\dots,\frac{\partial y_m}{\partial x_n},</p>
+<p>\end{bmatrix}<br>$$<br><img src="https://mytyporapic.oss-cn-beijing.aliyuncs.com/image-20220421164827802.png" alt="image-20220421164827802"></p>
 <h3 id="计算图"><a href="#计算图" class="headerlink" title="计算图"></a>计算图</h3><ul>
 <li>将代码分解成操作子</li>
 <li>将计算表示成一个无环图</li>
@@ -331,34 +281,31 @@ y_m
 <li>比较真实值和预估值</li>
 <li>假设$y$是真实值，$\hat{y}$是估计值，可以比较</li>
 </ul>
-<script type="math/tex; mode=display">
-\ell(y,\hat{y})=\frac{1}{2}(y-\hat{y})^2</script><p>叫做平方损失</p>
+<p>$$<br>\ell(y,\hat{y})=\frac{1}{2}(y-\hat{y})^2<br>$$</p>
+<p>叫做平方损失</p>
 <h4 id="训练数据"><a href="#训练数据" class="headerlink" title="训练数据"></a>训练数据</h4><ul>
 <li>收集一些数据点来决定参数值（权重和偏差）称之为训练数据</li>
 <li>通常越多越好</li>
 <li>假设有n个样本，记</li>
 </ul>
-<script type="math/tex; mode=display">
-X=[x_1,x_2,...,x_n]^T  \quad y=[y_1,y_2,...,y_n]^T</script><h4 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h4><ul>
+<p>$$<br>X=[x_1,x_2,…,x_n]^T  \quad y=[y_1,y_2,…,y_n]^T<br>$$</p>
+<h4 id="参数学习"><a href="#参数学习" class="headerlink" title="参数学习"></a>参数学习</h4><ul>
 <li>训练损失</li>
 </ul>
-<script type="math/tex; mode=display">
-\ell(X,y,w,b)=\frac{1}{2n}\sum \limits_{i=1}^n (y_i-<\textbf{x}_i,\textbf{w}>-b)^2=\frac{1}{2n}||\textbf{y}-\textbf{Xw}-b||^2</script><ul>
+<p>$$<br>\ell(X,y,w,b)=\frac{1}{2n}\sum \limits_{i=1}^n (y_i-&lt;\textbf{x}_i,\textbf{w}&gt;-b)^2=\frac{1}{2n}||\textbf{y}-\textbf{Xw}-b||^2<br>$$</p>
+<ul>
 <li>最小化损失来学习参数</li>
 </ul>
-<script type="math/tex; mode=display">
-\textbf{w}^*,\textbf{b}^* = argmin_{\textbf{w},b} l(\textbf{X,y,w},b)</script><h4 id="显示解"><a href="#显示解" class="headerlink" title="显示解"></a>显示解</h4><ul>
+<p>$$<br>\textbf{w}^*,\textbf{b}^* = argmin_{\textbf{w},b} l(\textbf{X,y,w},b)<br>$$</p>
+<h4 id="显示解"><a href="#显示解" class="headerlink" title="显示解"></a>显示解</h4><ul>
 <li>将偏差加入权重  $\textbf{X} \gets [\textbf{X,1}]$ $ \textbf{w} \gets [\textbf{w},b]^T$</li>
 </ul>
-<script type="math/tex; mode=display">
-\ell(\textbf{X,y,w})=\frac{1}{2n}||\textbf{y}-\textbf{Xw}||^2  \\
-\frac{\partial}{\partial\textbf{w}}\ell(\textbf{X,y,w})=\frac{1}{n}(\textbf{y-Xw})^T\textbf{X}</script><ul>
+<p>$$<br>\ell(\textbf{X,y,w})=\frac{1}{2n}||\textbf{y}-\textbf{Xw}||^2  \<br>\frac{\partial}{\partial\textbf{w}}\ell(\textbf{X,y,w})=\frac{1}{n}(\textbf{y-Xw})^T\textbf{X}<br>$$</p>
+<ul>
 <li>损失是凸函数，最优解满足</li>
 </ul>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial\textbf{w}}\ell(\textbf{X,y,w})=0\\
-\frac{1}{n}(\textbf{y}-\textbf{Xw})^T \textbf{X}=0\\
-\textbf{w}^*=(\textbf{X}^T\textbf{X})^{-1}\textbf{Xy}</script><p>这是唯一有最优解的模型 </p>
+<p>$$<br>\frac{\partial}{\partial\textbf{w}}\ell(\textbf{X,y,w})=0\<br>\frac{1}{n}(\textbf{y}-\textbf{Xw})^T \textbf{X}=0\<br>\textbf{w}^*=(\textbf{X}^T\textbf{X})^{-1}\textbf{Xy}<br>$$</p>
+<p>这是唯一有最优解的模型 </p>
 <p>包括数据流水线、模型、损失函数、小批量随机梯度下降优化器</p>
 <h3 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h3><p>回归vs分类</p>
 <p>回归：单连续数值输出、自然区间R、跟真实值的区别作为损失</p>
@@ -411,7 +358,10 @@ X=[x_1,x_2,...,x_n]^T  \quad y=[y_1,y_2,...,y_n]^T</script><h4 id="参数学习"
     <a href="/2021/07/03/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="prev" title="hexo+Next博客搭建">
       <i class="fa fa-chevron-left"></i> hexo+Next博客搭建
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/03/12/%E9%80%86%E5%90%91%E5%AD%A6%E4%B9%A0/" rel="next" title="逆向学习">
+      逆向学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -486,20 +436,20 @@ X=[x_1,x_2,...,x_n]^T  \quad y=[y_1,y_2,...,y_n]^T</script><h4 id="参数学习"
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -540,12 +490,12 @@ X=[x_1,x_2,...,x_n]^T  \quad y=[y_1,y_2,...,y_n]^T</script><h4 id="参数学习"
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">9k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
 
         
